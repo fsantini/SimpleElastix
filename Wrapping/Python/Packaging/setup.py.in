@@ -40,8 +40,8 @@ def get_pep386version():
         version += ".dev"+sitkDEV
 
     # Local Version Identifier
-    if sitkHASH and not "@SimpleITK_BUILD_DISTRIBUTE@" in ['1', 'ON']:
-        version += "+g"+sitkHASH
+    #if sitkHASH and not "@SimpleITK_BUILD_DISTRIBUTE@" in ['1', 'ON']:
+    #    version += "+g"+sitkHASH
 
     return version
 
@@ -70,7 +70,7 @@ class build_ext(_build_ext):
 
 
 setup(
-    name = 'SimpleITK',
+    name = 'SimpleITK-SimpleElastix',
     version = get_pep386version(),
     author = 'Insight Software Consortium',
     author_email = 'insight-users@itk.org',
